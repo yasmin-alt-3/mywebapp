@@ -14,4 +14,5 @@ class Temp(webapp2.RequestHandler):
         f=(c*9/5)+32
         self.response.out.write('<h3>Farenheit = %.2f</h3>'%f)
         self.response.out.write('<a href="/">Back</a>')
-app=webapp2.WSGApplication([('/',Temp)],debug=True)
+app=webapp2.WSGIApplication([('/',Temp)],debug=True)
+
